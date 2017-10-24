@@ -1,0 +1,170 @@
+/*COLOR SCHEME
+orange #FB982B
+yellow #F9CC6B
+lavender #A78FB7
+purple #644C76
+black #2E2E2E
+*/
+
+.pageWrapper {
+  background-color: #2E2E2E;
+  text-align: center;
+  padding: 10px 0;
+  float: left;
+  width: 100%;
+  background-image: url("https://cdn.pixabay.com/photo/2014/04/02/16/17/spiders-web-306841_1280.png");
+  background-repeat: round;
+}
+
+.header {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h1 {
+  font-size: 3em;
+  float: left;
+  width: 100%;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+h2 {
+  float: left;
+  width: 100%;
+  font-size: 2em;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+  font-family: 'Berkshire Swash', cursive;
+  transform: scale(1.2);
+}
+
+h3 {
+  border-top: 2px solid #A78FB7;
+  padding-top: 5px;
+  margin-top: 5px;
+}
+
+.challengeWrapper {
+  width: 100%;
+  background-color: #FB982B;
+  background-image: url("https://orig00.deviantart.net/0c88/f/2016/091/c/0/sre_design_texture_test_pumpkin_texture_by_wakaflockaflame1-d9xdvff.png");
+  margin: 60px 0;
+  padding: 10px 0;
+  float: left;
+  transition: 250ms;
+  min-height: 500px;
+  border-radius: 30%;
+  position: relative;
+  box-shadow: 1px 1px 5px black;
+}
+
+.challengeWrapper::before {
+  content: "";
+  position: absolute;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 50px;
+  top: -50px;
+  left: 40%;
+  height: 50px;
+  width: 15%;
+  background-color: green;
+}
+
+.challengeWrapper::after {
+  content: "";
+  position: absolute;
+  border-top-right-radius: 50px;
+  top: -32px;
+  left: 40%;
+  height: 32px;
+  width: 8%;
+  background-color: #2E2E2E;
+}
+
+.challengeWrapper:hover {
+  background-color: #F9CC6B;
+  animation: wiggle .25s 1;
+}
+
+.viewButton {
+  border: none;
+  border-radius: 10px;
+  background-color: #644C76;
+  color: white;
+  width: 10%;
+  margin-top: 20px;
+  margin-left: 45%;
+  padding: 10px 0;
+  float: left;
+  transition: 250ms;
+  cursor: pointer;
+}
+
+.viewButton:hover {
+  background-color: #A78FB7;
+  color: black;
+}
+
+.viewButton:focus {
+  outline: none;
+}
+
+.viewButton:active {
+  background-color: #644C76;
+}
+
+.challenge {
+  background-color: white;
+  float: left;
+  width: 90%;
+  margin: 20px 5%;
+  padding: 20px 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: none;
+  line-height: 1.2em;
+}
+
+.challengeHeader {
+  width: 100%;
+  margin: 10px 0;
+  float: left;
+}
+
+.challengeInput {
+  width: 100%;
+  margin: 10px 0;
+  float: left;
+}
+
+.challengeOutput {
+  width: 100%;
+  margin: 10px 0;
+  float: left;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@media screen and (min-width: 800px){
+  .challengeWrapper {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .challengeWrapper {
+    width: 45%;
+    margin-left: 3.33%;
+  }
+}
