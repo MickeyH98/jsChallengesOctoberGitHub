@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS Challenges</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="lib/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script src="lib/js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="pageWrapper">
+      <div class="header">
+        <h1>October JS Challenges</h1>
+      </div>
+
+      <div class="challengeWrapper challenge1Wrapper">
+        <h2>Challenge 1</h2>
+        <button class="viewButton">View</button>
+
+        <div class="challenge challenge1">
+          <div class="challengeHeader challenge1Header">
+            <h3>Problem: </h3>
+            <p>Steve has a string, s, consisting of n lowercase English alphabetical letters.
+              In one operation, he can delete any pair of adjacent letters with same value.
+              For example, string "aabcc" would become either "aab" or "bcc" after 1 operation.
+              Steve wants to reduce s as much as possible.
+              To do this, he will repeat the above operation as many times as it can be performed.</p>
+          </div>
+          <div class="challengeInput challenge1Input">
+            <h3>Input</h3>
+              <input id="challenge1InputTarget" type="text" name="input" placeholder="ex: aabcc">
+              <input type="submit" name="submit" value="Reduce" onclick="challenge1();">
+          </div>
+          <div class="challengeOutput challenge1Output">
+            <h3>Output</h3>
+            <p id="challenge1OutputTarget"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="challengeWrapper challenge2Wrapper">
+        <h2>Challenge 2</h2>
+        <button class="viewButton">View</button>
+
+        <div class="challenge challenge2">
+          <div class="challengeHeader challenge2Header">
+            <h3>Problem: </h3>
+            <p>Given an array of integers,
+              calculate which fraction of its elements are positive,
+              which fraction of its elements are negative,
+              and which fraction of its elements are zeroes, respectively.
+              Print the decimal value of each fraction on a new line.</p>
+          </div>
+          <div class="challengeInput challenge2Input">
+            <h3>Input</h3>
+              <input id="challenge2InputTarget" type="text" name="input" placeholder="ex: 1, 2, 3">
+              <input type="submit" name="submit" value="Check" onclick="challenge2();">
+          </div>
+          <div class="challengeOutput challenge2Output">
+            <h3>Output</h3>
+            <p id="challenge2OutputTarget"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="challengeWrapper challenge3Wrapper">
+        <h2>Challenge 3</h2>
+        <button class="viewButton" onclick="challenge3();">View</button>
+
+        <div class="challenge challenge3">
+          <div class="challengeHeader challenge3Header">
+            <h3>Problem: </h3>
+            <p>Write a JavaScript program to get the current date, as well as functionality to add and subtract days.</p>
+          </div>
+          <div class="challengeOutput challenge3Output">
+            <h3>Date</h3>
+            <p id="challenge3OutputTarget"></p>
+            <button onclick="changeDay(-1);">-</button>
+            <button onclick="changeDay(1);">+</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="challengeWrapper challenge4Wrapper">
+        <h2>Challenge 4</h2>
+        <button class="viewButton">View</button>
+
+        <div class="challenge challenge4">
+          <div class="challengeHeader challenge4Header">
+            <h3>Problem: </h3>
+            <p>Write a JavaScript program to find the area of a triangle
+              where you pass lengths of the three sides.</p>
+          </div>
+          <div class="challengeInput challenge4Input">
+            <h3>Input</h3>
+              <input id="challenge4InputTarget1" type="number" name="input" placeholder="ex: 1">
+              <input id="challenge4InputTarget2" type="number" name="input" placeholder="ex: 1">
+              <input id="challenge4InputTarget3" type="number" name="input" placeholder="ex: 1">
+              <input type="submit" name="submit" value="Check" onclick="challenge4();">
+          </div>
+          <div class="challengeOutput challenge4Output">
+            <h3>Output</h3>
+            <p id="challenge4OutputTarget"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="challengeWrapper challenge6Wrapper">
+        <h2>Challenge 6</h2>
+        <button class="viewButton">View</button>
+
+        <div class="challenge challenge6">
+          <div class="challengeHeader challenge6Header">
+            <h3>Problem: </h3>
+            <p>Write a JavaScript program to check from two given integers, if one is positive and one is negative.</p>
+          </div>
+          <div class="challengeInput challenge6Input">
+            <h3>Input</h3>
+              <input id="challenge6InputTarget1" type="number" name="input" placeholder="ex: 1">
+              <input id="challenge6InputTarget2" type="number" name="input" placeholder="ex: -1">
+              <input type="submit" name="submit" value="Check" onclick="challenge6();">
+          </div>
+          <div class="challengeOutput challenge6Output">
+            <h3>Output</h3>
+            <p id="challenge6OutputTarget1"></p>
+            <p id="challenge6OutputTarget2"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="challengeWrapper challenge7Wrapper">
+        <h2>Challenge 7</h2>
+        <button class="viewButton">View</button>
+
+        <div class="challenge challenge7">
+          <div class="challengeHeader challenge7Header">
+            <h3>Problem: </h3>
+            <p>Write a JavaScript program to remove a character at the
+              specified position of a given string and return the new string.</p>
+          </div>
+          <div class="challengeInput challenge7Input">
+            <h3>Input</h3>
+              <input id="challenge7InputTarget1" type="text" name="input" placeholder="ex: Hello World">
+              <input id="challenge7InputTarget2" type="number" name="input" placeholder="ex: 1">
+              <input type="submit" name="submit" value="Check" onclick="challenge7();">
+          </div>
+          <div class="challengeOutput challenge7Output">
+            <h3>Output</h3>
+            <p id="challenge7OutputTarget"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="challengeWrapper challenge8Wrapper">
+        <h2>Challenge 8</h2>
+        <button class="viewButton">View</button>
+
+        <div class="challenge challenge8">
+          <div class="challengeHeader challenge8Header">
+            <h3>Problem: </h3>
+            <p>Write a JavaScript program to check if three given integer values are in the range 50-99 (inclusive).
+              Return true if one or more of them are in the said range.</p>
+          </div>
+          <div class="challengeInput challenge8Input">
+            <h3>Input</h3>
+              <input id="challenge8InputTarget1" type="number" name="input" placeholder="ex: 0">
+              <input id="challenge8InputTarget2" type="number" name="input" placeholder="ex: 50">
+              <input id="challenge8InputTarget3" type="number" name="input" placeholder="ex: 100">
+              <input type="submit" name="submit" value="Check" onclick="challenge8();">
+          </div>
+          <div class="challengeOutput challenge8Output">
+            <h3>Output</h3>
+            <p id="challenge8OutputTarget1"></p>
+            <p id="challenge8OutputTarget2"></p>
+            <p id="challenge8OutputTarget3"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="challengeWrapper dataChallenge1Wrapper">
+        <h2>Data Challenge 1</h2>
+        <button class="viewButton" onclick="dataChallenge1();">View</button>
+
+        <div class="challenge dataChallenge1">
+          <div class="challengeHeader dataChallenge1Header">
+            <h3>Problem: </h3>
+            <p>Filter the list of inventors for those who were born in the 1500's</p>
+          </div>
+          <div class="challengeOutput dataChallenge1Output">
+            <h3>Output</h3>
+            <p id="dataChallenge1OutputTarget"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="challengeWrapper dataChallenge2Wrapper">
+        <h2>Data Challenge 2</h2>
+        <button class="viewButton" onclick="dataChallenge2();">View</button>
+
+        <div class="challenge dataChallenge2">
+          <div class="challengeHeader dataChallenge2Header">
+            <h3>Problem: </h3>
+            <p>Give us an array of the inventors' first and last names</p>
+          </div>
+          <div class="challengeOutput dataChallenge2Output">
+            <h3>Output</h3>
+            <p id="dataChallenge2OutputTarget"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="challengeWrapper dataChallenge3Wrapper">
+        <h2>Data Challenge 3</h2>
+        <button class="viewButton" onclick="dataChallenge3();">View</button>
+
+        <div class="challenge dataChallenge3">
+          <div class="challengeHeader dataChallenge3Header">
+            <h3>Problem: </h3>
+            <p>Sort the inventors by birthdate, oldest to youngest</p>
+          </div>
+          <div class="challengeOutput dataChallenge3Output">
+            <h3>Output</h3>
+            <p id="dataChallenge3OutputTarget"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="challengeWrapper dataChallenge4Wrapper">
+        <h2>Data Challenge 4</h2>
+        <button class="viewButton" onclick="dataChallenge4();">View</button>
+
+        <div class="challenge dataChallenge4">
+          <div class="challengeHeader dataChallenge4Header">
+            <h3>Problem: </h3>
+            <p>How many years did all the inventors live?</p>
+          </div>
+          <div class="challengeOutput dataChallenge4Output">
+            <h3>Output</h3>
+            <p id="dataChallenge4OutputTarget"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="challengeWrapper dataChallenge5Wrapper">
+        <h2>Data Challenge 5</h2>
+        <button class="viewButton" onclick="dataChallenge5();">View</button>
+
+        <div class="challenge dataChallenge5">
+          <div class="challengeHeader dataChallenge5Header">
+            <h3>Problem: </h3>
+            <p>Sort the inventors by years lived</p>
+          </div>
+          <div class="challengeOutput dataChallenge5Output">
+            <h3>Output</h3>
+            <p id="dataChallenge5OutputTarget"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="challengeWrapper dataChallenge6Wrapper">
+        <h2>Data Challenge 6</h2>
+        <button class="viewButton" onclick="dataChallenge6();">View</button>
+
+        <div class="challenge dataChallenge6">
+          <div class="challengeHeader dataChallenge6Header">
+            <h3>Problem: </h3>
+            <p>Sort the people alphabetically by last name</p>
+          </div>
+          <div class="challengeOutput dataChallenge6Output">
+            <h3>Output</h3>
+            <p id="dataChallenge6OutputTarget"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="challengeWrapper dataChallenge7Wrapper">
+        <h2>Data Challenge 7</h2>
+        <button class="viewButton" onclick="dataChallenge7();">View</button>
+
+        <div class="challenge dataChallenge7">
+          <div class="challengeHeader dataChallenge7Header">
+            <h3>Problem: </h3>
+            <p>Sum up the instances of each of these ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick']</p>
+          </div>
+          <div class="challengeOutput dataChallenge7Output">
+            <h3>Output</h3>
+            <p id="dataChallenge7OutputTarget"></p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
+
+<!--
+Problem 1:
+
+Problem 2:
+
+
+Problem 3:
+Write a JavaScript program to get the current date, as well as functionality to add and subtract days.
+Expected Output :
+mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
+
+
+Problem 4:
+Write a JavaScript program to find the area of a triangle where you pass lengths of the three sides.
+
+Problem 6:
+Write a JavaScript program to check from two given integers, if one is positive and one is negative.
+
+Problem 7:
+Write a JavaScript program to remove a character at the specified position of a given string and return the new string.
+
+
+Problem 8:
+Write a JavaScript program to check if three given integer values are in the range 50-99 (inclusive). Return true if one or more of them are in the said range.
+
+Using the information below complete the following exercises:
+const inventors = [
+{ first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
+{ first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
+{ first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
+{ first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
+{ first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
+{ first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
+{ first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
+{ first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
+{ first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
+{ first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
+{ first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
+{ first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
+];
+const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
+
+// 1. Filter the list of inventors for those who were born in the 1500's
+
+
+// 2. Give us an array of the inventors' first and last names
+
+// 3. Sort the inventors by birthdate, oldest to youngest
+
+// 4. How many years did all the inventors live?
+
+// 5. Sort the inventors by years lived
+
+// 6. Sort the people alphabetically by last name
+
+// 7. Sum up the instances of each of these
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
+-->
